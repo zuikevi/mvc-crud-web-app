@@ -1,0 +1,37 @@
+@model UpdateViewModel
+@using ChinookEntities
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums</title>
+</head>
+
+<body>
+    <h3>Update Album</h3>
+    <form action="~/Update/Updated/@Model.selAlbum.AlbumId" method="post">
+        @Html.AntiForgeryToken()
+        <p>Title: <input type="text" name="tbxTitle" value="@Model.selAlbum.Title"> Artist: <input type="text" name="tbxArtistId" value="@Model.selArtist.Name"></p>
+        <p>Tracks</p>
+        @{
+            int count = 0;
+            <ol>
+                @foreach (Track track in @Model.Tracks)
+                {
+                    string str = count.ToString();
+                    <li><input type="text" name=@str value="@track.Name"></li>
+                    count++;
+                }
+            </ol>
+            
+        }
+        <p><input type="submit" value="Update"></p>
+    </form>
+    
+    <p><a href="~/Albums/Index">back</a></p>
+</body>
+
+</html>

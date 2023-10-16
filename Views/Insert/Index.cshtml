@@ -1,0 +1,37 @@
+@model AlbumsViewModel
+@using ChinookEntities
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert</title>
+</head>
+
+<body>
+    <h3>Insert Album</h3>
+    <form action="~/Insert/InsertConfirm/@Model.trackCount" method="post">
+        @Html.AntiForgeryToken()
+        <p>Title: <input type="text" name="tbxTitle"> Artist: <input type="text" name="tbxArtistId"></p>
+        <p>Tracks</p>
+        <ol>
+            @{
+                int count = 0;
+                while(count < @Model.trackCount){
+                    string str = count.ToString();
+                    <li><input type="text" name=@str></li>
+                    count++;
+                }
+            }
+        </ol>
+        
+        <p><a href="~/Insert/Index/@Model.trackCountAdd">add</a> or <a href="~/Insert/Index/@Model.trackCountRemove">remove</a> a track</p>
+        <p><input type="submit" value="Insert"></p>
+    </form>
+    
+    <p><a href="~/Albums/Index">back</a></p>
+</body>
+
+</html>
