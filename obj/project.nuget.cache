@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gIR9pV1rH+VhPpMhRxr0UCi0U8AX0jjOIokrJpaIda1W5DjRtwJhDbNWkVcTUwZH2KeTJ+HmFCyp7jgBxhcHNQ==",
+  "dgSpecHash": "mMEW+bfU5xM=",
   "success": true,
   "projectFilePath": "D:\\study notes\\web dev\\music store web app\\Project\\Project.csproj",
   "expectedPackageFiles": [
@@ -31,7 +31,11 @@
     "C:\\Users\\lil-nib\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\lil-nib\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\lil-nib\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\lil-nib\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+    "C:\\Users\\lil-nib\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\lil-nib\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.31\\microsoft.netcore.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\lil-nib\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.31\\microsoft.windowsdesktop.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\lil-nib\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.31\\microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\lil-nib\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.31\\microsoft.netcore.app.host.win-x64.6.0.31.nupkg.sha512"
   ],
   "logs": []
 }

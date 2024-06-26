@@ -12,9 +12,37 @@
 
 <body>
     <h1>Chinook Music Store</h1>
-    
+
     <p><a href="~/Insert/Index/3">Insert Album</a></p>
-    <table border=1>
+    <div>
+        @foreach (Artist artist in @Model.Artists)
+        {
+            @foreach (Album album in @Model.Albums)
+            {
+                @if (@album.ArtistId == @artist.ArtistId)
+                {
+                    <div class="album-layout">
+                        <div href="~/Tracks/Index/@album.AlbumId">
+                            <div class="album-link">
+                                <p>@album.Title</p>
+                                <p>@artist.Name</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="~/Tracks/Index/@album.AlbumId">details</a>
+                            <a href="~/Update/Index/@album.AlbumId">update</a>
+                            <a href="~/Delete/Index/@album.AlbumId"
+                                onclick="return confirm('Are you sure you want to delete @album.Title by @artist.Name?')">delete</a>
+                        </div>
+                    </div>
+                }
+            }
+        }
+    </div>
+
+
+    <table>
         <tr>
             <th>Album</th>
             <th>Artist</th>
@@ -26,18 +54,21 @@
         {
             @foreach (Album album in @Model.Albums)
             {
-                @if(@album.ArtistId == @artist.ArtistId){
+                @if (@album.ArtistId == @artist.ArtistId)
+                {
                     <tr>
                         <td>@album.Title</td>
                         <td>@artist.Name</td>
                         <td><a href="~/Tracks/Index/@album.AlbumId">details</a></td>
                         <td><a href="~/Update/Index/@album.AlbumId">update</a></td>
-                        <td><a href="~/Delete/Index/@album.AlbumId" onclick="return confirm('Are you sure you want to delete @album.Title by @artist.Name?')">delete</a></td>
+                        <td><a href="~/Delete/Index/@album.AlbumId"
+                                onclick="return confirm('Are you sure you want to delete @album.Title by @artist.Name?')">delete</a>
+                        </td>
                     </tr>
                 }
-                
+
             }
-            
+
         }
     </table>
 </body>

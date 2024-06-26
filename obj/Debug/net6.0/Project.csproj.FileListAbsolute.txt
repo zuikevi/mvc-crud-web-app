@@ -208,9 +208,10 @@ D:\study notes\web dev\music store web app\Project\obj\Debug\net6.0\staticwebass
 D:\study notes\web dev\music store web app\Project\obj\Debug\net6.0\staticwebassets.build.json
 D:\study notes\web dev\music store web app\Project\obj\Debug\net6.0\staticwebassets.development.json
 D:\study notes\web dev\music store web app\Project\obj\Debug\net6.0\scopedcss\bundle\Project.styles.css
-D:\study notes\web dev\music store web app\Project\obj\Debug\net6.0\Project.csproj.CopyComplete
 D:\study notes\web dev\music store web app\Project\obj\Debug\net6.0\Project.dll
 D:\study notes\web dev\music store web app\Project\obj\Debug\net6.0\refint\Project.dll
 D:\study notes\web dev\music store web app\Project\obj\Debug\net6.0\Project.pdb
 D:\study notes\web dev\music store web app\Project\obj\Debug\net6.0\Project.genruntimeconfig.cache
 D:\study notes\web dev\music store web app\Project\obj\Debug\net6.0\ref\Project.dll
+D:\study notes\web dev\music store web app\Project\obj\Debug\net6.0\Project.sourcelink.json
+D:\study notes\web dev\music store web app\Project\obj\Debug\net6.0\Project.csproj.Up2Date
