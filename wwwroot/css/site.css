@@ -2,19 +2,101 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 /* new */
-.album-layout{
-  flex:1 100px;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin-bottom: 20px;
+.grid-albums {
+  display: grid;
+  position: relative;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.75rem; 
+  width: 100%;
+  max-width: 72rem;
+  min-height: 0;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
 }
 
-.album-link{
-  background-color:darkgray;
+.album-card {
+  background-color: #F5F1ED;
   background-size: auto;
   flex: 1 100px;
   flex-direction: column;
   flex-wrap: nowrap;
+
+  border-radius: 0.5rem;
+
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+}
+
+.album-card-text {
+  grid-column: span 2 / span 2;
+}
+
+.album-card-edit {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column; 
+  justify-items: end; 
+  justify-self: end;
+}
+
+.album-card-filter {
+  display: flex;
+  flex-direction: row; 
+  padding-left: 1rem;
+}
+
+.text-overflow-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+
+}
+
+.text-overflow-artist {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #636363;
+}
+
+.text-overflow-options {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #636363;
+
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem; 
 }
 
 p {
@@ -30,7 +112,7 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color:black;
+  color: black;
 }
 
 .btn-primary {
@@ -39,7 +121,8 @@ a {
   border-color: #1861ac;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
@@ -50,6 +133,7 @@ a {
 html {
   font-size: 14px;
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -59,6 +143,7 @@ html {
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -83,10 +168,12 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 60px;
+  /* Vertically center the text there */
 }
