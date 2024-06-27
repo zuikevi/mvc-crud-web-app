@@ -1,2 +1,4 @@
-# Web App .Net6
- Web app with full CRUD functionality. Created using ASP.NET MVC, Entity Framework and .Net6.
+### chinook music store
+Small University project that uses .Net and Entity Framework to implement CRUD operations.  
+    
+Might update the visuals and ux of the project as I'm practising some front-end languages.
