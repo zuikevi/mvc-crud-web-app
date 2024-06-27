@@ -11,13 +11,11 @@
 </head>
 
 <body>
-    @* <h1>Chinook Music Store</h1> *@
-
     <div class="album-card-filter">
         <a href="~/Insert/Index/3" class="text-overflow-options">all</a>
         <a href="~/Insert/Index/3" class="text-overflow-options">singles</a>
         <a href="~/Insert/Index/3" class="text-overflow-options">albums</a>
-        <a href="~/Insert/Index/3" class="text-overflow-options">add new album</a>
+        <a href="~/Insert/Index/3" class="text-overflow-options">add album</a>
     </div>
 
     <div class="grid-albums">
@@ -46,37 +44,6 @@
             }
         }
     </div>
-
-
-    @* <table>
-        <tr>
-            <th>Album</th>
-            <th>Artist</th>
-            <th> </th>
-            <th> </th>
-            <th> </th>
-        </tr>
-        @foreach (Artist artist in @Model.Artists)
-        {
-            @foreach (Album album in @Model.Albums)
-            {
-                @if (@album.ArtistId == @artist.ArtistId)
-                {
-                    <tr>
-                        <td>@album.Title</td>
-                        <td>@artist.Name</td>
-                        <td><a href="~/Tracks/Index/@album.AlbumId">details</a></td>
-                        <td><a href="~/Update/Index/@album.AlbumId">update</a></td>
-                        <td><a href="~/Delete/Index/@album.AlbumId"
-                                onclick="return confirm('Are you sure you want to delete @album.Title by @artist.Name?')">delete</a>
-                        </td>
-                    </tr>
-                }
-
-            }
-
-        }
-    </table> *@
 </body>
 
 </html>
